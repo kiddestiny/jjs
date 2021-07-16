@@ -32,6 +32,10 @@
 45 4 * * * node /scripts/jd_sddd.js >> /scripts/logs/jd_sddd.log 2>&1
 #jd_sign_graphics
 14 10 * * * node /scripts/jd_sign_graphics.js >> /scripts/logs/jd_sign_graphics.log 2>&1
+#省钱大赢家之翻翻乐
+14 10 * * * node /scripts/jd_big_winner.js >> /scripts/logs/jd_big_winner.log 2>&1
+#柠檬特务Z行动
+20 0 * * *  node /scripts/jd_twz-star.js >> /scripts/logs/jd_twz-star.log 2>&1
 ##############长期活动##############
 # 签到
 7 0,17 * * * cd /scripts && node jd_bean_sign.js >> /scripts/logs/jd_bean_sign.log 2>&1
