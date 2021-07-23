@@ -34,13 +34,13 @@
 14 10 * * * node /scripts/jd_sign_graphics.js >> /scripts/logs/jd_sign_graphics.log 2>&1
 #省钱大赢家之翻翻乐
 14 10 * * * node /scripts/jd_big_winner.js >> /scripts/logs/jd_big_winner.log 2>&1
-#柠檬特务Z行动
-20 0 * * *  node /scripts/jd_twz-star.js >> /scripts/logs/jd_twz-star.log 2>&1
+#MM领京豆
+21 9 * * * node /scripts/gua_MMdou.js >> /scripts/logs/gua_MMdou.log 2>&1
 ##############长期活动##############
 # 签到
 7 0,17 * * * cd /scripts && node jd_bean_sign.js >> /scripts/logs/jd_bean_sign.log 2>&1
 # 东东超市兑换奖品
-0,30 0 * * * node /scripts/jd_blueCoin.js >> /scripts/logs/jd_blueCoin.log 2>&1
+59 23 * * * node /scripts/jd_blueCoin.js >> /scripts/logs/jd_blueCoin.log 2>&1
 # 摇京豆
 6 0,23 * * * node /scripts/jd_club_lottery.js >> /scripts/logs/jd_club_lottery.log 2>&1
 # 东东农场
