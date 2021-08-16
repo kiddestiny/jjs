@@ -40,8 +40,8 @@ $.shareCodes = [];
 let cookiesArr = [], cookie = '', token = '';
 let UA, UAInfo = {}
 let nowTimes;
-
-const randomCount = $.isNode() ? 3 : 3;
+let cfdNotify= false;
+const randomCount = 0;
 if ($.isNode()) {
   Object.keys(jdCookieNode).forEach((item) => {
     cookiesArr.push(jdCookieNode[item])
@@ -1584,8 +1584,6 @@ function showMsg() {
         $.msg($.name, "", `${$.result.join("\n")}`);
       }
 
-      if ($.isNode() && process.env.CFD_NOTIFY_CONTROL)
-        await notify.sendNotify(`${$.name} - 账号${$.index} - ${$.nickName}`, `${$.result.join("\n")}`);
     }
     resolve();
   });
