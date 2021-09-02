@@ -46,6 +46,8 @@
 21 9 * * * node /scripts/jd_ljd.js >> /scripts/logs/jd_ljd.log 2>&1
 #粉丝互动
 4 6,18 * * * node /scripts/jd_fan.js >> /scripts/logs/jd_fan.log 2>&1
+#领现金兑换红包
+0,1 0 0 * * * node /scripts/jd_cash_exchange.js >> /scripts/logs/jd_cash_exchange.log 2>&1
 ##############长期活动##############
 # 签到
 7 0,17 * * * cd /scripts && node jd_bean_sign.js >> /scripts/logs/jd_bean_sign.log 2>&1
