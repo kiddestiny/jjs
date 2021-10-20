@@ -7,7 +7,9 @@
 #女装盲盒 活动时间：2021-05-24到2021-06-22
 35 1,22 * * * node /scripts/jd_nzmh.js >> /scripts/logs/jd_nzmh.log 2>&1
 #京东极速版红包(活动时间：2021-5-5至2021-5-31)
-20 0,22 * * * node /scripts/jd_speed_redpocke.js >> /scripts/logs/jd_speed_redpocke.log 2>&1
+20 0,22 * * * node /scripts/jd_speed_redpocke1.js >> /scripts/logs/jd_speed_redpocke1.log 2>&1
+#京东极速版红包(活动时间：2021-5-5至2021-5-31)
+20 0,22 * * * node /scripts/jd_speed_redpocke2.js >> /scripts/logs/jd_speed_redpocke2.log 2>&1
 #超级直播间红包雨(活动时间不定期，出现异常提示请忽略。红包雨期间会正常)
 1,31 0-23/1 * * * node /scripts/jd_live_redrain.js >> /scripts/logs/jd_live_redrain.log 2>&1
 #每日抽奖(活动时间：2021-05-01至2021-05-31)
@@ -48,6 +50,8 @@
 4 6,18 * * * node /scripts/jd_fan.js >> /scripts/logs/jd_fan.log 2>&1
 #领现金兑换红包
 0,1 0 0 * * * node /scripts/jd_cash_exchange.js >> /scripts/logs/jd_cash_exchange.log 2>&1
+#城城领现金
+0 0-23/1 * * * node /scripts/jd_city.js>> /scripts/logs/jd_city.log 2>&1
 ##############长期活动##############
 # 签到
 7 0,17 * * * cd /scripts && node jd_bean_sign.js >> /scripts/logs/jd_bean_sign.log 2>&1
