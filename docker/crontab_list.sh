@@ -52,6 +52,12 @@
 0,1 0 0 * * * node /scripts/jd_cash_exchange.js >> /scripts/logs/jd_cash_exchange.log 2>&1
 #城城领现金
 0 0-23/1 * * * node /scripts/jd_city.js>> /scripts/logs/jd_city.log 2>&1
+#京东小魔方
+31 2,8 * * * node /scripts/jd_jmf.js>> /scripts/logs/jd_jmf.log 2>&1
+#京喜领88元红包
+4 10,16,21 * * * node /scripts/jd_jxlhb.js>> /scripts/logs/jd_jxlhb.log 2>&1
+#众筹许愿池
+40 0,2 * * * node /scripts/jd_wish.js>> /scripts/logs/jd_wish.log 2>&1
 ##############长期活动##############
 # 签到
 7 0,17 * * * cd /scripts && node jd_bean_sign.js >> /scripts/logs/jd_bean_sign.log 2>&1
