@@ -58,6 +58,8 @@
 4 10,16,21 * * * node /scripts/jd_jxlhb.js>> /scripts/logs/jd_jxlhb.log 2>&1
 #众筹许愿池
 40 0,2 * * * node /scripts/jd_wish.js>> /scripts/logs/jd_wish.log 2>&1
+#环游记
+0 * * * * node /scripts/jd_hyj.js>> /scripts/logs/jd_hyj.log 2>&1
 ##############长期活动##############
 # 签到
 7 0,17 * * * cd /scripts && node jd_bean_sign.js >> /scripts/logs/jd_bean_sign.log 2>&1
