@@ -1,12 +1,15 @@
-/**
- 环游记助力
- cron 0 11 * * * https://raw.githubusercontent.com/atyvcn/jd_scripts/main/jd_hyj_Help.js
- By、梦创星河
- */
+/*
+环游记助力
+By、梦创星河
+
+============Quantumultx===============
+[task_local]
+#环游记助力
+cron 0 11 * * * https://raw.githubusercontent.com/atyvcn/jd_scripts/main/jd_travel_Help.js, tag=环游记助力, enabled=true
+*/
 const $ = new Env('环游记助力');
 //Node.js用户请在jdCookie.js处填写京东ck;
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
-const dyjCode = $.isNode() ? (process.env.dyjCode ? process.env.dyjCode : null) : null //邀请码变量，不支持多账号，格式：redEnvelopeId@markedPin
 //IOS等用户直接用NobyDa的jd cookie
 let cookiesArr = [],
     cookie = '';
@@ -20,6 +23,7 @@ const JD_API_HOST = 'https://api.m.jd.com/client.action';
 
 let secretp = ''
 let inviteIdArr = []
+let uuid = ''
 
 !(async () => {
     if (!cookiesArr[0]) {
@@ -149,7 +153,7 @@ function travel_getTaskDetail() {
 }
 
 function get_secretp(inviteId = "") {
-    let body = inviteId?{}:{"inviteId":inviteId};
+    let body = inviteId?{"inviteId":inviteId}:{};
     return new Promise((resolve) => {
         $.post(taskPostUrl("travel_getHomeData", body), async(err, resp, data) => {
             try {
@@ -195,7 +199,8 @@ function taskPostUrl(functionId, body) {
 
 
 function getUA() {
-    $.UA = `jdapp;android;10.0.6;11;9363537336739353-2636733333439346;network/wifi;model/KB2000;addressid/138121554;aid/9657c795bc73349d;oaid/;osVer/30;appBuild/88852;partner/oppo;eufv/1;jdSupportDarkMode/0;Mozilla/5.0 (Linux; Android 11; KB2000 Build/RP1A.201005.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/77.0.3865.120 MQQBrowser/6.2 TBS/045537 Mobile Safari/537.36`
+    $.UA = `jdapp;android;10.0.6;11;${randomNum(16)}-${randomNum(16)};network/wifi;model/KB2000;addressid/138121554;aid/9657c795bc73349d;oaid/;osVer/30;appBuild/88852;partner/oppo;eufv/1;jdSupportDarkMode/0;Mozilla/5.0 (Linux; Android 11; KB2000 Build/RP1A.201005.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/77.0.3865.120 MQQBrowser/6.2 TBS/045537 Mobile Safari/537.36`
+    uuid = $.UA.split(';')[4]
 }
 
 function randomNum(e) {
