@@ -64,6 +64,8 @@
 0 0-23/2 * * * node /scripts/jd_hyj_sjb.js>> /scripts/logs/jd_hyj_sjb.log 2>&1
 #环游记助力
 cron 0 11 * * * node /scripts/jd_hyj_Help.js>> /scripts/logs/jd_hyj_Help.log 2>&1
+#环游记组队加队
+cron 0 8 * * * node /scripts/jd_travel_pk_joinGroup.js>> /scripts/logs/jd_travel_pk_joinGroup.log 2>&1
 ##############长期活动##############
 # 签到
 7 0,17 * * * cd /scripts && node jd_bean_sign.js >> /scripts/logs/jd_bean_sign.log 2>&1
