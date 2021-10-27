@@ -68,6 +68,8 @@
 0 8 * * * node /scripts/jd_travel_pk_joinGroup.js>> /scripts/logs/jd_travel_pk_joinGroup.log 2>&1
 #京东超级盒子
 10 1,6,8 25-31,1-11 10,11 * node /scripts/jd_superbox.js>> /scripts/logs/jd_superbox.log 2>&1
+#集卡赢大奖
+10 7,21 * * * node /scripts/ jd_jika.js>> /scripts/logs/ jd_jika.log 2>&1
 ##############长期活动##############
 # 签到
 7 0,17 * * * cd /scripts && node jd_bean_sign.js >> /scripts/logs/jd_bean_sign.log 2>&1
