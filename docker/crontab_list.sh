@@ -58,8 +58,6 @@
 4 10,16,21 * * * node /scripts/jd_jxlhb.js>> /scripts/logs/jd_jxlhb.log 2>&1
 #众筹许愿池
 40 0,2 * * * node /scripts/jd_wish.js>> /scripts/logs/jd_wish.log 2>&1
-#环游记
-0 * * * * node /scripts/jd_hyj.js>> /scripts/logs/jd_hyj.log 2>&1
 #环游记自动收金币
 0 0-23/2 * * * node /scripts/jd_hyj_sjb.js>> /scripts/logs/jd_hyj_sjb.log 2>&1
 #环游记助力
@@ -69,7 +67,9 @@
 #京东超级盒子
 10 1,6,8 25-31,1-11 10,11 * node /scripts/jd_superbox.js>> /scripts/logs/jd_superbox.log 2>&1
 #集卡赢大奖
-10 7,21 * * * node /scripts/ jd_jika.js>> /scripts/logs/ jd_jika.log 2>&1
+10 7,21 * * * node /scripts/jd_jika.js>> /scripts/logs/jd_jika.log 2>&1
+#双十一无门槛红包
+1 12,18 * * * node /scripts/jd_1111RedEnvelope.js>> /scripts/logs/jd_1111RedEnvelope.log 2>&1
 ##############长期活动##############
 # 签到
 7 0,17 * * * cd /scripts && node jd_bean_sign.js >> /scripts/logs/jd_bean_sign.log 2>&1
